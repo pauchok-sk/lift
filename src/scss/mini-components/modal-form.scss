@@ -1,0 +1,13 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__item {
+    width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

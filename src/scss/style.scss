@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/templates";
+@import "./base/settings";
+@import "./base/media";
+@import "./base/body-config";
+@import "./base/config-container";
+
+// ui
+@import "./ui/button";
+@import "./ui/list";
+@import "./ui/dropdown";
+@import "./ui/modal";
+@import "./ui/title";
+@import "./ui/input";
+
+// modal-form
+@import "./mini-components/modal-form";
+
+// components
+@import "./components/header";
+
+@import "./components/intro";
+
+@import "./components/footer";

@@ -1,0 +1,72 @@
+<header class="header">
+	<div class="container header__container">
+		<a href="/" class="header__logo">
+			<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+		</a>
+		<div class="header__line"></div>
+		<div data-da=".header__nav, 1199, 0" data-spollers data-spollers-speed="300" class="dropdown header__dropdown">
+			<button data-spoller-close data-spoller class="btn dropdown__btn header__dropdown-btn">
+				<span>Группа Компаний <strong>«НеоЛифт»</strong> </span>
+				<svg class="dropdown__arrow">
+					<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+				</svg>
+			</button>
+			<div class="dropdown__item">
+				<div class="dropdown__window">
+					<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+					<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+					<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+					<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+					<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+				</div>
+			</div>
+		</div>
+		<div class="header__line"></div>
+		<nav class="header__nav" id="burger">
+			<ul class="list header__list">
+				<li><a href="#">Услуги</a></li>
+				<li><a href="#">Работы</a></li>
+				<li><a href="#">Сертификаты</a></li>
+				<li><a href="#" class="_active">Документация</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="header__line"></div>
+		<div data-da=".header__nav,1199,3" class="header__contacts">
+			<a href="tel:+78126039394" class="header__tel"> +7 (812) 603-93-94 </a>
+			<a href="mailto:info@psp1p.ru" class="header__mail">info@psp1p.ru</a>
+		</div>
+		<div class="header__line"></div>
+		<button data-modal="order-call" class="btn-modal btn-main _primary" data-da=".header__nav,1199,2">
+			заказать звонок
+		</button>
+		<button class="btn header__burger-btn" id="burger-open">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+</header>
+
+<div class="modal" data-modal="order-call">
+	<div class="modal__overlay">
+		<div class="modal__window">
+			<div class="modal__head">
+				<h5 class="title modal__title">Заказать звонок</h5>
+				<button class="btn modal__close">
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<form action="#" class="modal-form" id="form-order-call">
+				<div class="modal-form__item">
+					<input type="text" placeholder="Ваше имя" id="order-call-name" name="Имя" class="input" />
+				</div>
+				<div class="modal-form__item">
+					<input type="tel" placeholder="Телефон" id="order-call-tel" name="Телефон" class="input" />
+				</div>
+				<button class="btn-main modal-form__btn">Перезвоните мне</button>
+			</form>
+		</div>
+	</div>
+</div>
