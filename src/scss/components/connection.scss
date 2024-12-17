@@ -1,0 +1,90 @@
+.connection {
+  position: relative;
+  padding: 120px 0px;
+  background: url("@img/connection.jpg") top 0 right 0 / cover no-repeat;
+  z-index: 1;
+  @include laptop-min {
+    padding: 80px 0px;
+  }
+  @include tablet {
+    padding: 60px 0px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      #eaeddf 0%,
+      rgba(255, 255, 255, 0.9) 45.5%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: -1;
+  }
+  &__title {
+    margin-bottom: 40px;
+    span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+    @include laptop-min {
+      margin-bottom: 25px;
+    }
+  }
+  &__content {
+    font-family: "Prosto One";
+    font-size: 20px;
+    margin: 0;
+    text-transform: uppercase;
+    @include laptop-min {
+      font-size: 19px;
+    }
+  }
+  &__tel {
+    display: block;
+    font-family: "Prosto One";
+    font-size: 55px;
+    color: var(--orange);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include laptop-min {
+      margin-bottom: 25px;
+      font-size: 40px;
+      line-height: 100%;
+      span {
+        font-size: 24px;
+        line-height: 100%;
+      }
+    }
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__form {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    @include tablet {
+      max-width: 500px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+  }
+  &__form-item {
+    flex: 0 1 300px;
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+  &__btn {
+    flex-shrink: 0;
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
