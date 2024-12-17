@@ -3,5 +3,20 @@
   touch-action: none;
 }
 .body {
-  
+  background: url('@img/frame.svg') center bottom 0 / 1580px auto no-repeat;
+  @media (max-width: 1600px) {
+    background-size: calc(100vw - 20px) auto;
+  }
+}
+.main {
+  padding-top: 108px;
+  @include laptop {
+    padding-top: 103px;
+  }
+  @include laptop-middle {
+    padding-top: 100px;
+  }
+  @include laptop-min {
+    padding-top: 80px;
+  }
 }

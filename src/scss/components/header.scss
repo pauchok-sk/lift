@@ -6,6 +6,9 @@
   padding: 25px 0px;
   background-color: white;
   z-index: 100;
+  @include laptop-min {
+    padding: 15px 0px;
+  }
   &__container {
     @include flex-between;
     gap: 15px;

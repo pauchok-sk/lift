@@ -1,0 +1,13 @@
+.content {
+  color: var(--tuna);
+  font-size: 20px;
+  margin: 0;
+  font-weight: 300;
+
+  @include laptop-min {
+    font-size: 18px;
+  }
+  @include tablet {
+    font-size: 16px;
+  }
+}
