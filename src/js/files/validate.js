@@ -16,12 +16,29 @@ export default function validate() {
           errorMessage: "Это поле должно быть заполнено",
         },
       ])
-      .addField("#order-call-tel", [
+      .addField("#order-call-email", [
         {
           rule: "minLength",
           value: 3,
           errorMessage: "Минимум 3 символа",
         },
+        {
+          rule: "required",
+          errorMessage: "Это поле должно быть заполнено",
+        },
+      ])
+      .addField("#order-call-work", [
+        {
+          rule: "minLength",
+          value: 3,
+          errorMessage: "Минимум 3 символа",
+        },
+        {
+          rule: "required",
+          errorMessage: "Это поле должно быть заполнено",
+        },
+      ])
+      .addField("#order-call-policy", [
         {
           rule: "required",
           errorMessage: "Это поле должно быть заполнено",

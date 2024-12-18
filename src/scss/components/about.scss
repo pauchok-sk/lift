@@ -1,0 +1,142 @@
+.about {
+  padding: 120px 0px;
+  @include laptop-min {
+    padding: 80px 0px;
+  }
+  @include tablet {
+    padding: 60px 0px;
+  }
+  &__title {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 40px;
+    @include laptop-min {
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+  &__img {
+    width: calc(50% - 20px);
+    height: auto;
+    @include laptop-min {
+      width: 650px;
+    }
+  }
+  &__info {
+    flex: 1;
+    @include laptop-min {
+      flex: 0 1 650px;
+    }
+  }
+  &__subtitle {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+
+    &._primary {
+      color: var(--primary);
+    }
+
+    @include laptop-min {
+      font-size: 25px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__content {
+    color: black;
+    max-width: 670px;
+  }
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 50px;
+  }
+  &__statisic {
+    flex: 1;
+    @include laptop {
+      flex: 0 1 650px;
+    }
+  }
+  &__statistic-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__statistic-item {
+  }
+  &__statistic-number {
+    font-family: "Prosto One", sans-serif;
+    font-size: 38px;
+    margin-bottom: 5px;
+    color: var(--orange);
+  }
+  &__statistic-value {
+    display: block;
+    font-size: 13px;
+    color: var(--gray-dark);
+  }
+  &__team {
+    flex: 0 1 970px;
+    @include laptop {
+      flex-basis: 100%;
+    }
+  }
+  &__team-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @include laptop-min {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__team-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 170px;
+  }
+  &__team-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    @include  mobile {
+      margin-bottom: 15px;
+    }
+  }
+  &__team-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0px 0px 5px 0px;
+  }
+  &__team-status {
+    font-size: 13px;
+    color: var(--gray-dark);
+  }
+  &__team-line {
+    width: 1px;
+    height: 255px;
+    background-color: black;
+    @include laptop-min {
+      display: none;
+    }
+  }
+}

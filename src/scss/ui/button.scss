@@ -36,4 +36,12 @@
       background-color: transparent;
     }
   }
+  &._green {
+    background-color: var(--wh);
+    border: 1px solid var(--wh);
+    @include hover {
+      color: white;
+      background-color: transparent;
+    }
+  }
 }

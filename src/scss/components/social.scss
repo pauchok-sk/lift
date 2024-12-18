@@ -1,0 +1,111 @@
+.social {
+  padding-bottom: 120px;
+  @include laptop-min {
+    padding-bottom: 80px;
+  }
+  @include tablet {
+    padding-bottom: 60px;
+  }
+  &__title {
+    margin-bottom: 60px;
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    @include laptop-middle {
+      gap: 20px;
+    }
+  }
+  &__item {
+    position: relative;
+    grid-column: 4 span;
+    padding: 35px;
+    border-radius: 5px;
+    z-index: 1;
+    @include laptop-middle {
+      padding: 25px;
+    }
+    @include laptop-min {
+      grid-column: 6 span;
+    }
+    @include tablet {
+      grid-column: 12 span;
+    }
+
+    &._inst {
+      background: linear-gradient(54deg, #ff8100 0%, #d92938 52%, #9100ff 100%);
+      .social__item-title {
+        background: linear-gradient(3deg, #ff8100 0%, #d92938 52%, #9100ff 85%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &._rutube {
+      background: var(--rt);
+      .social__item-title {
+        color: var(--rt);
+      }
+    }
+    &._vk {
+      background: var(--vk);
+      .social__item-title {
+        color: var(--vk);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 2px;
+      background-color: white;
+      border-radius: 5px;
+      z-index: -1;
+    }
+  }
+  &__icon {
+    display: block;
+    margin-bottom: 35px;
+  }
+  &__item-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+    @include laptop-min {
+      font-size: 25px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__item-content {
+    font-size: 18px;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  &__item-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--orange);
+    @include hover {
+      .social__item-arrow {
+        transform: translateX(15px);
+      }
+    }
+  }
+  &__item-arrow {
+    width: 25px;
+    height: 15px;
+    transition: transform 0.2s ease;
+  }
+}

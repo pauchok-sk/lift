@@ -1,0 +1,56 @@
+.cost {
+  position: relative;
+  padding: 90px 0px;
+  background: url('@img/price.jpg') top 0 right 0 / cover no-repeat;
+  color: white;
+  z-index: 1;
+  @include laptop {
+    padding: 60px 0px;
+    background-position: right -250px top 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      opacity: 0.3;
+      background-color: var(--black);
+      z-index: -1;
+    }
+  }
+  &__title {
+    max-width: 930px;
+    font-size: 48px;
+    margin-bottom: 40px;
+    span {
+      color: var(--wh);
+    }
+    @include tablet {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+  }
+  &__subtitle {
+    font-size: 20px;
+    color: var(--orange);
+    margin-bottom: 20px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__content {
+    max-width: 680px;
+    margin-bottom: 40px;
+    color: white;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__btn {
+    gap: 10px;
+    max-width: 270px;
+  }
+  &__btn-icon {
+    width: 25px;
+    height: 25px;
+  }
+}

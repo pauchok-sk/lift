@@ -1,0 +1,90 @@
+.contacts {
+  z-index: 1;
+  @include laptop {
+    padding-top: 60px;
+  }
+  .container {
+    position: relative;
+  }
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 120px 55px;
+    color: white;
+    background-color: var(--primary);
+    max-width: 550px;
+    z-index: 10;
+    @include laptop {
+      position: static;
+      max-width: none;
+      width: 100%;
+      background-color: transparent;
+      color: var(--black);
+      padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+    color: inherit;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__content {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0px 0px 20px 0px;
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__item {
+    font-size: 24px;
+    font-weight: 300;
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+    &:first-child {
+      a {
+        font-size: 30px;
+      }
+    }
+    &:nth-child(2) {
+      a {
+        font-size: 20px;
+      }
+    }
+    a {
+      text-transform: uppercase;
+      font-family: "Prosto One", sans-serif;
+      @include hover {
+        text-decoration: underline;
+      }
+      @include laptop {
+        font-size: inherit !important;
+      }
+    }
+  }
+  &__map {
+    height: 630px;
+    @include laptop {
+      height: 400px;
+    }
+    @include tablet-min {
+      height: 300px;
+    }
+  }
+}

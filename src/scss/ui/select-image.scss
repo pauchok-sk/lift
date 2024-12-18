@@ -1,0 +1,30 @@
+.select-image {
+  position: relative;
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  &__arrow {
+    width: 8px;
+    height: 8px;
+    color: var(--gray);
+  }
+  &__item {
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    margin-top: 5px;
+  }
+  &__item-btn {
+    cursor: pointer;
+    img {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+}

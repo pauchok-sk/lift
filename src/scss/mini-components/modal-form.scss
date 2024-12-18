@@ -1,13 +1,117 @@
 .modal-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 
   &__item {
     width: 100%;
   }
+  &__input {
+    padding: 10px 18px;
+    min-height: 53px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
 
+    font-size: 14px;
+    &::placeholder {
+      color: var(--gray);
+    }
+
+    &._big {
+      min-height: 105px;
+      resize: none;
+    }
+  }
+  &__telephones {
+    display: flex;
+    align-items: center;
+    padding: 10px 18px;
+    min-height: 53px;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: white;
+  }
+  &__input-simple {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    &::placeholder {
+      color: var(--gray);
+    }
+  }
+  &__item-content {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--tana);
+    margin: 0px 0px 10px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__policy-wrapper {
+    margin-top: 20px;
+  }
+  &__input-check {
+    display: none;
+    &:checked + label {
+      &::before {
+        background-color: var(--tana);
+      }
+    }
+  }
+  &__label-check {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 38px;
+    color: var(--tana);
+    @include tablet {
+      font-size: 16px;
+      padding-left: 25px;
+    }
+    a {
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 23px;
+      height: 23px;
+      border: 2px solid var(--tana);
+      border-radius: 5px;
+      left: 0;
+      top: 0;
+      @include tablet {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
   &__btn {
     width: 100%;
+  }
+  &__content-bottom {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--tana);
+    margin: 10px 0px 0px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+    a {
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
   }
 }
