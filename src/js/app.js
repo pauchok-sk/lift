@@ -11,6 +11,7 @@ import slider from "./files/slider.js";
 import selectImage from "./files/select-image.js";
 import fancy from "./files/fancy.js";
 import map from "./files/map.js";
+import anchors from "./files/anchors.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -23,3 +24,4 @@ selectImage();
 maskToggle();
 fancy();
 map();
+anchors();

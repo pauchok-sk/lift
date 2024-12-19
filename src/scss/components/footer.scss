@@ -1,0 +1,100 @@
+.footer {
+  padding: 70px 0px 105px 0px;
+  color: white;
+  background-color: var(--primary);
+  @include laptop-min {
+    padding: 50px 0px;
+  }
+  @include tablet {
+    padding: 30px 0px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 310px;
+    @include laptop-middle {
+      width: 250px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 140px;
+    @include laptop {
+      gap: 40px;
+    }
+  }
+  &__nav-item {
+  }
+  &__title {
+    margin-bottom: 20px;
+    color: white;
+  }
+  &__list {
+    li {
+      font-size: 16px;
+      line-height: 29px;
+    }
+    a {
+      position: relative;
+
+      @include hover {
+        &::before {
+          left: 0;
+          right: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition:
+          right 0.2s ease,
+          left 0.2s ease;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contacts-wrapper {
+    flex: 1;
+  }
+  &__tel {
+    font-family: "Prosto One", sans-serif;
+    display: block;
+    font-size: 20px;
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+  &__mail {
+    font-size: 16px;
+    line-height: 29px;
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+  &__copyright {
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+}

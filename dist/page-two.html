@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241220001956">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container header__container">
+			<a href="/" class="header__logo">
+				<img src="img/logo-2.svg" alt="logo" class="header__logo-img" />
+			</a>
+			<div class="header__line"></div>
+			<div data-da=".header__nav, 1199, 0" data-spollers data-spollers-speed="300" class="dropdown header__dropdown">
+				<button data-spoller-close data-spoller class="btn dropdown__btn header__dropdown-btn">
+					<span>Группа Компаний <strong>«НеоЛифт»</strong> </span>
+					<svg class="dropdown__arrow">
+						<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+					</svg>
+				</button>
+				<div class="dropdown__item">
+					<div class="dropdown__window">
+						<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+						<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+						<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+						<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+						<a href="#" class="dropdown__item-btn">Ссылка номер один</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__line"></div>
+			<nav class="header__nav" id="burger">
+				<ul class="list header__list">
+					<li><a href="#rec" class="anchor">Услуги</a></li>
+					<li><a href="#equipment" class="anchor">Оборудование</a></li>
+					<li><a href="#gallery" class="anchor">Работы</a></li>
+					<li><a href="#contacts" class="anchor">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header__line"></div>
+			<div data-da=".header__nav,1199,3" class="header__contacts">
+				<a href="tel:+78126039394" class="header__tel"> +7 (812) 603-93-94 </a>
+				<a href="mailto:info@psp1p.ru" class="header__mail">info@psp1p.ru</a>
+			</div>
+			<div class="header__line"></div>
+			<button data-modal="order-call" class="btn-modal btn-main _primary" data-da=".header__nav,1199,2">
+				заказать звонок
+			</button>
+			<button class="btn header__burger-btn" id="burger-open">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</header>
+
+	<div class="modal" data-modal="order-call">
+		<div class="modal__overlay">
+			<div class="modal__window">
+				<button class="btn modal__close">
+					<div class="modal__close-wrapper">
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+				<h5 class="title modal__title">узнать стоимость работ</h5>
+				<p class="modal__content">
+					Оставьте свои данные и мы обязательно с вами свяжемся
+				</p>
+				<form action="#" class="modal-form" id="form-order-call">
+					<div class="modal-form__item">
+						<input type="text" placeholder="Ваше имя" id="order-call-name" name="Имя" class="modal-form__input" />
+					</div>
+					<div class="modal-form__item">
+						<input type="email" placeholder="Ваш E-mail" id="order-call-email" name="Email" class="modal-form__input" />
+					</div>
+					<div class="modal-form__item">
+						<textarea name="Вид работ" id="order-call-work" placeholder="Какой вид работ Вам необходим?" class="modal-form__input _big"></textarea>
+					</div>
+					<div class="modal-form__item">
+						<p class="modal-form__item-content">
+							Можете написать свой номер, но это не обязательно
+						</p>
+						<div data-spollers class="modal-form__telephones parent-mask">
+							<div class="select-image">
+								<div data-spoller data-spoller-close class="select-image__btn">
+									<img src="img/russia.svg" alt="icon" class="select-image__icon" />
+									<svg class="select-image__arrow">
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div class="select-image__item">
+									<div data-mask-btn="+399 99 999 9999" class="select-image__item-btn">
+										<img src="img/br.svg" alt="icon" />
+									</div>
+									<div data-mask-btn="+7 (999) 999-99-99" class="select-image__item-btn">
+										<img src="img/russia.svg" alt="icon" />
+									</div>
+								</div>
+							</div>
+							<input type="tel" placeholder="Телефон" id="order-call-tel" name="Телефон" class="modal-form__input-simple input-mask" />
+						</div>
+					</div>
+					<div class="modal-form__policy-wrapper">
+						<input type="checkbox" name="Согласие с политикой" id="order-call-policy" class="modal-form__input-check" />
+						<label for="order-call-policy" class="modal-form__label-check">Я согласен на обработку <a href="#">персональных данных</a></label>
+					</div>
+					<button class="btn-main modal-form__btn">Перезвоните мне</button>
+					<p class="modal-form__content-bottom">
+						Нажимая на кнопку вы соглашаетесь с
+						<a href="#">политикой конфидициальности</a>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<main class="main">
+
+		<section class="intro-page">
+			<div class="container">
+				<span class="intro-page__subcontent">
+					в кратчайшие сроки и с гарантией лучшей цены
+				</span>
+				<h1 class="title intro-page__title"><span>Лифт</span> в частный дом</h1>
+				<h5 class="title title-3 intro-page__arrows">проект → поставка → монтаж</h5>
+				<p class="content intro-page__content">Оставьте заявку и узнайте стоимость экспертизы</p>
+				<button data-modal="order-call" class="btn-main btn-modal">Узнать стоимость работ</button>
+			</div>
+		</section>
+
+		<section class="why">
+			<div class="container">
+				<h2 class="title title-2 why__title">
+					зачем Нужен лифт <span>в частный дом?</span>
+				</h2>
+				<div class="why__wrapper">
+					<div class="why__info">
+						<p class="content">
+							Каждый владелец загородного дома стремится к комфортному обустройству
+							своего коттеджа, виллы или дома. И сегодня наличие лифта, начиная с
+							2-х, 3-х и более этажного дома, уже не кажется не нужной роскошью.
+							Лифт становится обязательным атрибутом комфорта и высокого уровня
+							объекта.
+						</p>
+						<img src="img/why-1.jpg" alt="image" class="why__info-img" />
+						<img src="img/why-2.jpg" alt="image" class="why__info-img" />
+					</div>
+					<img src="img/why-3.jpg" alt="image" class="why__img" />
+				</div>
+				<div class="why__wrapper">
+					<img src="img/why-4.jpg" alt="image" class="why__img" />
+					<div class="why__bottom-info">
+						<p class="content why__bottom-content">
+							Хочется обратить внимание на прекрасную возможность органично вписать
+							коттеджный лифт и украсить интерьеры лестниц, холлов и других
+							помещений.
+						</p>
+						<h5 class="title content why__bottom-title">
+							Наша компания всегда предоставляет Заказчику услугу разработки
+							индивидуального дизайн-проекта
+						</h5>
+						<ul class="list why__bottom-list">
+							<li class="content why__bottom-item">
+								<span>отделка кабины</span> (внутренняя и внешняя)
+							</li>
+							<li class="content why__bottom-item">
+								<span>двери</span> (глухие, стеклянные)
+							</li>
+							<li class="content why__bottom-item">
+								<span>шахты</span> (металлокаркас, комбинированные с выходом на открытое пространство)
+							</li>
+							<li class="content why__bottom-item">
+								<span>обрамления дверных проемов в шахту лифта</span>
+							</li>
+						</ul>
+						<p class="content why__bottom-frame-content">
+							Мы выбираем для отделки натуральные материалы, такие как: металл, бронза, латунь, декоративная нержавеющая сталь, стекло, натуральный или декоративный камень, деревянный массив, шпон и ПВХ.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="seo">
+			<div class="container">
+				<h2 class="title title-2 seo__title">наши услуги</h2>
+				<ul class="list seo__list">
+					<li class="seo__item">
+						<h5 class="title seo__item-title">поставка</h5>
+						<p class="seo__item-content">
+							Гарантируем высокое качество лифтового оборудования и его
+							своевременную поставку в сроки.
+						</p>
+					</li>
+					<li class="seo__item">
+						<h5 class="title seo__item-title">Монтаж</h5>
+						<p class="seo__item-content">
+							Монтируем и сдаем в эксплуатацию все типы пассажирских лифтов:
+							электрические, гидравлические, пневматические.
+						</p>
+					</li>
+					<li class="seo__item">
+						<h5 class="title seo__item-title">Проектирование</h5>
+						<p class="seo__item-content">
+							Проектирование уникальных лифтовых и подъемных систем  по
+							индивидуальному заказу.
+						</p>
+					</li>
+					<li class="seo__item">
+						<h5 class="title seo__item-title">Пусконаладка</h5>
+						<p class="seo__item-content">
+							Комплекс работ, выполняемых в период подготовки и проведения
+							индивидуальных испытаний.
+						</p>
+					</li>
+					<li class="seo__item">
+						<h5 class="title seo__item-title">Обслуживание</h5>
+						<p class="seo__item-content">
+							Комплексное техническое обслуживание лифтового оборудования.
+						</p>
+					</li>
+					<li class="seo__item">
+						<h5 class="title seo__item-title">Ремонт</h5>
+						<p class="seo__item-content">
+							Осуществляем быстрый и качественный ремонт лифтов и лифтового
+							оборудования.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<div class="no-top">
+			<section class="rec" id="rec">
+				<div class="container">
+					<h2 class="title title-2 rec__title">
+						Рекомендуемое
+						<span>лифтовое оборудование</span>
+					</h2>
+					<p class="content rec__content">
+						Многолетний опыт работы наших специалистов позволяет предлагать услуги по
+						лучшим ценам при неизменно высоком качестве.
+					</p>
+					<div class="swiper rec__slider">
+						<div class="swiper-wrapper">
+							<article class="swiper-slide rec__item">
+								<h5 class="title rec__item-title">Пассажирский подъёмник</h5>
+								<p class="rec__item-content">
+									Компактный и бюджетный подъёмник для загородного дома или
+									многоуровневой квартиры с простой установкой
+								</p>
+								<img src="img/rec-11.jpg" alt="image" class="rec__item-img" />
+								<button data-modal="order-call" class="btn btn-main btn-modal rec__item-btn">
+									Подробнее
+								</button>
+							</article>
+							<article class="swiper-slide rec__item">
+								<h5 class="title rec__item-title">Стильный панорамный лифт</h5>
+								<p class="rec__item-content">
+									Пневматический лифт для коттеджа – функциональный и оригинальный
+									элемент интерьера
+								</p>
+								<img src="img/rec-12.jpg" alt="image" class="rec__item-img" />
+								<button data-modal="order-call" class="btn btn-main btn-modal rec__item-btn">
+									Подробнее
+								</button>
+							</article>
+							<article class="swiper-slide rec__item">
+								<h5 class="title rec__item-title">Классический лифт</h5>
+								<p class="rec__item-content">
+									Лифты небольших габаритов и любого дизайнерского решения снаружи
+									шахты и внутри кабины.
+								</p>
+								<img src="img/rec-13.jpg" alt="image" class="rec__item-img" />
+								<button data-modal="order-call" class="btn btn-main btn-modal rec__item-btn">
+									Подробнее
+								</button>
+							</article>
+							<article class="swiper-slide rec__item">
+								<h5 class="title rec__item-title">Гидравлический лифт</h5>
+								<p class="rec__item-content">
+									Современное технологическое решение пассажирского лифта, для особых
+									условий применения.
+								</p>
+								<img src="img/rec-14.jpg" alt="image" class="rec__item-img" />
+								<button data-modal="order-call" class="btn btn-main btn-modal rec__item-btn">
+									Подробнее
+								</button>
+							</article>
+							<article class="swiper-slide rec__item">
+								<h5 class="title rec__item-title">Платформа для инвалидов</h5>
+								<p class="rec__item-content">
+									Оптимальное решение (цена/качество), для комфортного перемещения
+									людей с ограниченными возможностями.
+								</p>
+								<img src="img/rec-15.jpg" alt="image" class="rec__item-img" />
+								<button data-modal="order-call" class="btn btn-main btn-modal rec__item-btn">
+									Подробнее
+								</button>
+							</article>
+							<article class="swiper-slide rec__item">
+								<h5 class="title rec__item-title">
+									Внешний <br />
+									лифт
+								</h5>
+								<p class="rec__item-content">
+									Классическое решение вертикального перемещения людей, при
+									невозможности установки лифта внутри здания
+								</p>
+								<img src="img/rec-16.jpg" alt="image" class="rec__item-img" />
+								<button data-modal="order-call" class="btn btn-main btn-modal rec__item-btn">
+									Подробнее
+								</button>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<section class="why-we">
+			<img src="img/why-we.png" alt="image" class="why-we__img">
+			<div class="container">
+				<h2 class="title title-2 why-we__title">почему мы</h2>
+				<p class="content why-we__content">
+					Штат компании укомплектован квалифицированными специалистами, имеющими все
+					необходимые допуски и разрешения.
+				</p>
+				<ul class="list why-we__list">
+					<li class="why-we__item">
+						<h5 class="title title-3 why-we__item-title">Более 40</h5>
+						<p class="content">
+							Более 40 специалистов <br />
+							участвуют в процессах монтажа <br />
+							и пусконаладочных работ
+						</p>
+					</li>
+					<li class="why-we__item">
+						<h5 class="title title-3 why-we__item-title">Более 20</h5>
+						<p class="content">
+							Более 20 сотрудников <br />
+							задействованы в сфере <br />
+							обслуживания лифтов.
+						</p>
+					</li>
+					<li class="why-we__item">
+						<h5 class="title title-3 why-we__item-title">Крупные партнеры</h5>
+						<p class="content">
+							Наши партнеры такие крупные <br />
+							строительные компании как: <br />
+							«Главстрой Санкт-Петербург», «СМУ-Северная долина» Bonava и другие.
+						</p>
+					</li>
+					<li class="why-we__item">
+						<h5 class="title title-3 why-we__item-title">Более 800</h5>
+						<p class="content">
+							На сегодняшний день мы <br>
+							обслуживаем более 800 единиц
+							оборудования в разных районах г. Санкт-Петербург.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="consultation">
+			<div class="container">
+				<h2 class="title title-2 consultation__title">
+					Нужна помощь в подборе лифтового оборудования?
+				</h2>
+				<p class="title title-3 consultation__content">
+					Мы подберем вариант, который нужен именно вам!
+				</p>
+				<button data-modal="order-call" class="btn-main btn-modal _white consultation__btn">Получить консультацию</button>
+			</div>
+		</section>
+
+		<section class="seo">
+			<div class="container">
+				<h2 class="title title-2 seo__title">
+					Преимущества <span>работы с нами</span>
+				</h2>
+				<p class="content seo__content">
+					Специалисты нашей компании в течении многих лет занимаются
+					проектированием, поставкой, <br />
+					монтажом и ремонтом лифтового оборудования. За эти годы мы накопили
+					богатый опыт решения <br />
+					разноплановых инженерных задач и наладили тесные связи с производителями
+					лифтов.
+				</p>
+				<ul class="list seo__list">
+					<li class="seo__item">
+						<h5 class="title seo__item-title">профессионализм и репутация</h5>
+						<p class="seo__item-content">
+							Мы в 100% случаев вводим в эксплуатацию все наши объекты.
+							Установленное нами оборудование четко соответствует проекту.
+						</p>
+					</li>
+					<li class="seo__item">
+						<h5 class="title seo__item-title">Срочность</h5>
+						<p class="seo__item-content">
+							Выстроенные бизнес-процессы и строгий тайм-менеджмент позволяет
+							сделать проект и монтаж в кратчайшие сроки.
+						</p>
+					</li>
+					<li class="seo__item">
+						<h5 class="title seo__item-title">комплексный подход</h5>
+						<p class="seo__item-content">
+							Вам не нужно искать разных исполнителей. Мы выполняем весь спектр
+							работ. Гарантии на услуги прописываем в договоре.
+						</p>
+					</li>
+					<li class="seo__item">
+						<h5 class="title seo__item-title">экспертность</h5>
+						<p class="seo__item-content">
+							Наши эксперты более 10 лет работают в сфере подъёмного оборудования.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="gallery _green" id="gallery">
+			<div class="container">
+				<h2 class="title title-2 gallery__title">
+					посмотрите фото <span>с наших последних проектов</span>
+				</h2>
+				<div class="gallery__wrapper">
+					<div class="gallery__item">
+						<h3 class="title title-3 gallery__item-title">
+							проект замены <span>лифтового оборудования жилого дома</span>
+						</h3>
+						<div class="swiper gallery__item-slider">
+							<div class="swiper-wrapper">
+								<a href="img/gallery-1.jpg" data-fancybox="gallery-1" class="swiper-slide">
+									<img src="img/gallery-1.jpg" alt="image" class="gallery__img" />
+								</a>
+								<a href="img/gallery-2.jpg" data-fancybox="gallery-1" class="swiper-slide">
+									<img src="img/gallery-2.jpg" alt="image" class="gallery__img" />
+								</a>
+								<a href="img/gallery-3.jpg" data-fancybox="gallery-1" class="swiper-slide">
+									<img src="img/gallery-3.jpg" alt="image" class="gallery__img" />
+								</a>
+							</div>
+						</div>
+						<div class="gallery__nav">
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-1.jpg" alt="image" class="gallery__img" />
+							</button>
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-2.jpg" alt="image" class="gallery__img" />
+							</button>
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-3.jpg" alt="image" class="gallery__img" />
+							</button>
+						</div>
+						<button data-modal="order-call" class="btn-modal btn-main gallery__item-btn">
+							рассчитать стоимость
+						</button>
+					</div>
+					<div class="gallery__item">
+						<h3 class="title title-3 gallery__item-title">
+							Проект установки <span>лифтового оборудования в бизнес-центре</span>
+						</h3>
+						<div class="swiper gallery__item-slider">
+							<div class="swiper-wrapper">
+								<a href="img/gallery-1.jpg" data-fancybox="gallery-2" class="swiper-slide">
+									<img src="img/gallery-1.jpg" alt="image" class="gallery__img" />
+								</a>
+								<a href="img/gallery-2.jpg" data-fancybox="gallery-2" class="swiper-slide">
+									<img src="img/gallery-2.jpg" alt="image" class="gallery__img" />
+								</a>
+								<a href="img/gallery-3.jpg" data-fancybox="gallery-2" class="swiper-slide">
+									<img src="img/gallery-3.jpg" alt="image" class="gallery__img" />
+								</a>
+							</div>
+						</div>
+						<div class="gallery__nav">
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-1.jpg" alt="image" class="gallery__img" />
+							</button>
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-2.jpg" alt="image" class="gallery__img" />
+							</button>
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-3.jpg" alt="image" class="gallery__img" />
+							</button>
+						</div>
+						<button data-modal="order-call" class="btn-modal btn-main gallery__item-btn">
+							рассчитать стоимость
+						</button>
+					</div>
+					<div class="gallery__item">
+						<h3 class="title title-3 gallery__item-title">
+							Проект установки <span>лифтового оборудования в бизнес-центре</span>
+						</h3>
+						<div class="swiper gallery__item-slider">
+							<div class="swiper-wrapper">
+								<a href="img/gallery-1.jpg" data-fancybox="gallery-3" class="swiper-slide">
+									<img src="img/gallery-1.jpg" alt="image" class="gallery__img" />
+								</a>
+								<a href="img/gallery-2.jpg" data-fancybox="gallery-3" class="swiper-slide">
+									<img src="img/gallery-2.jpg" alt="image" class="gallery__img" />
+								</a>
+								<a href="img/gallery-3.jpg" data-fancybox="gallery-3" class="swiper-slide">
+									<img src="img/gallery-3.jpg" alt="image" class="gallery__img" />
+								</a>
+							</div>
+						</div>
+						<div class="gallery__nav">
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-1.jpg" alt="image" class="gallery__img" />
+							</button>
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-2.jpg" alt="image" class="gallery__img" />
+							</button>
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-3.jpg" alt="image" class="gallery__img" />
+							</button>
+						</div>
+						<button data-modal="order-call" class="btn-modal btn-main gallery__item-btn">
+							рассчитать стоимость
+						</button>
+					</div>
+					<div class="gallery__item">
+						<h3 class="title title-3 gallery__item-title">
+							Проект установки <span>лифтового оборудования в бизнес-центре</span>
+						</h3>
+						<div class="swiper gallery__item-slider">
+							<div class="swiper-wrapper">
+								<a href="img/gallery-1.jpg" data-fancybox="gallery-4" class="swiper-slide">
+									<img src="img/gallery-1.jpg" alt="image" class="gallery__img" />
+								</a>
+								<a href="img/gallery-2.jpg" data-fancybox="gallery-4" class="swiper-slide">
+									<img src="img/gallery-2.jpg" alt="image" class="gallery__img" />
+								</a>
+								<a href="img/gallery-3.jpg" data-fancybox="gallery-4" class="swiper-slide">
+									<img src="img/gallery-3.jpg" alt="image" class="gallery__img" />
+								</a>
+							</div>
+						</div>
+						<div class="gallery__nav">
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-1.jpg" alt="image" class="gallery__img" />
+							</button>
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-2.jpg" alt="image" class="gallery__img" />
+							</button>
+							<button class="btn gallery__nav-btn">
+								<img src="img/gallery-3.jpg" alt="image" class="gallery__img" />
+							</button>
+						</div>
+						<button data-modal="order-call" class="btn-modal btn-main gallery__item-btn">
+							рассчитать стоимость
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="social _primary">
+			<div class="container">
+				<h2 class="title title-2 social__title">
+					наши <span>социальные сети</span>
+				</h2>
+				<div class="social__wrapper">
+					<div class="social__item _inst">
+						<img src="img/inst.svg" alt="inst" class="social__icon" />
+						<h5 class="title social__item-title">Instagram</h5>
+						<p class="social__item-content">
+							Деятельность компании Meta <br />
+							на территории России запрещена
+						</p>
+						<a href="#" target="_blank" class="social__item-btn">
+							<span>Перейти</span>
+							<svg class="social__item-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="social__item _rutube">
+						<img src="img/rutube-white.svg" alt="rutube" class="social__icon" />
+						<h5 class="title social__item-title">Rutube</h5>
+						<p class="social__item-content">
+							Подпишись, чтобы <br />
+							не пропустить акции и скидки
+						</p>
+						<a href="#" target="_blank" class="social__item-btn">
+							<span>Перейти</span>
+							<svg class="social__item-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="social__item _vk">
+						<img src="img/vk-white.svg" alt="vk" class="social__icon" />
+						<h5 class="title social__item-title">Вконтакте</h5>
+						<p class="social__item-content">
+							Подпишись, чтобы <br />
+							не пропустить акции и скидки
+						</p>
+						<a href="#" target="_blank" class="social__item-btn">
+							<span>Перейти</span>
+							<svg class="social__item-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="workers" id="equipment">
+			<div class="container">
+				<div class="workers__body">
+					<h2 class="title title-3 workers__title">
+						Наши специалисты прошли обучение у производителей поставляемого
+						оборудования
+					</h2>
+					<div class="workers__content">
+						<p>Наладчики отлично знают</p>
+						<ul>
+							<li>китайские лифты SRH, DIAO, лифты OTIS</li>
+							<li>греческие IST, Klemann</li>
+							<li>немецкие TISSON</li>
+							<li>испанские ORONA и MP</li>
+						</ul>
+					</div>
+					<p class="content title workers__subcontent">
+						И это далеко не полный список
+					</p>
+					<button data-modal="order-call" class="btn-main btn-modal _white">
+						Получить консультацию
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="contacts" id="contacts">
+			<div class="container">
+				<div class="contacts__wrapper">
+					<h2 class="title title-2 contacts__title">контакты</h2>
+					<p class="contacts__content">
+						Россия, г. Санкт-Петербург, Литовская ул., д.10
+					</p>
+					<ul class="list contacts__list">
+						<li class="contacts__item">
+							Телефон: <a href="tel:+78126039394">+7 (812) 603-93-94</a>
+						</li>
+						<li class="contacts__item">
+							E-mail: <a href="mailto:info@psp.spb.ru">info@psp.spb.ru</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="contacts__map" id="map" data-center="[59.97911456412088,30.35765749999993]" data-zoom="17"></div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container footer__container">
+			<a href="/" class="footer__logo">
+				<img src="img/logo-f-2.svg" alt="logo" class="footer__logo-img" />
+			</a>
+			<nav class="footer__nav">
+				<div class="footer__nav-item">
+					<h3 class="title title-3 footer__title">ГК «НЕОЛИФТ»</h3>
+					<ul class="list footer__list">
+						<li><a href="#">Поставки и Монтаж</a></li>
+						<li><a href="#">Обслуживание</a></li>
+						<li><a href="#">Проектирование</a></li>
+						<li><a href="#">Обеззараживание</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav-item">
+					<h3 class="title title-3 footer__title">МЕНЮ</h3>
+					<ul class="list footer__list">
+						<li><a href="/">Главная</a></li>
+						<li><a href="#rec" class="anchor">Наши услуги</a></li>
+						<li><a href="#gallery" class="anchor">Наши работы</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="footer__contacts">
+				<h3 class="title title-3 footer__title">КОНТАКТЫ</h3>
+				<div class="footer__contacts-wrapper">
+					<a href="tel:+78126039394" class="footer__tel">+7 (812) 603-93-94</a>
+					<a href="mailto:info@psp1p.ru" class="footer__mail">info@psp1p.ru</a>
+				</div>
+				<p class="footer__copyright">Copyright © Все права защищены</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20241220001956" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20241220001956"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+.why {
+  padding-top: 120px;
+  @include laptop-min {
+    padding-top: 80px;
+  }
+  @include tablet {
+    padding-top: 60px;
+  }
+  &__title {
+    max-width: 700px;
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    row-gap: 55px;
+    @include laptop-min {
+      gap: 30px;
+    }
+    @include tablet {
+      gap: 20px;
+    }
+  }
+  &__info-img {
+    width: calc(50% - 15px);
+    border-radius: 5px;
+    height: auto;
+    @include tablet {
+      width: calc(50% - 10px);
+    }
+  }
+  &__img {
+    width: 540px;
+    border-radius: 5px;
+    height: auto;
+    object-fit: cover;
+    @include laptop-middle {
+      width: 350px;
+    }
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__bottom {
+    display: flex;
+    gap: 30px;
+  }
+  &__bottom-info {
+    flex: 1; 
+  }
+  &__bottom-content {
+    margin-bottom: 35px;
+  }
+  &__bottom-title {
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 20px;
+  }
+  &__bottom-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__bottom-item {
+    color: var(--shaft);
+
+    &:not(:last-child) {
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    span {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+  &__bottom-frame-content {
+    border-radius: 15px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 40px;
+    margin-top: 70px;
+    @include laptop-min {
+      margin-top: 40px;
+      padding: 20px;
+    }
+  }
+}

@@ -1,5 +1,9 @@
 .intro {
   position: relative;
+  margin-bottom: 95px;
+  @include laptop-min {
+    margin-bottom: 0;
+  }
   &__wrapper {
     position: relative;
     padding: 120px 0px 40px 0px;

@@ -1,0 +1,61 @@
+.why-we {
+  position: relative;
+  padding: 120px 0px;
+  background: rgba(213, 220, 187, 0.50);
+  z-index: 1;
+  @include laptop-min {
+    padding: 80px 0px;
+  }
+  @include tablet {
+    padding: 60px 0px;
+  }
+  &__img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    right: 250px;
+    max-width: none;
+    top: 0;
+    z-index: -1;
+    @include desktop {
+      right: 0;
+    }
+    @include laptop-middle {
+      opacity: 0.4;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__content {
+    max-width: 670px;
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    row-gap: 40px;
+    max-width: 810px;
+    @include tablet {
+      gap: 30px;
+    }
+  }
+  &__item {
+    flex: 0 1 calc(50% - 30px);
+    @include laptop-min {
+      .content {
+        font-weight: 400;
+      }
+    }
+    @include tablet-min {
+      flex-basis: 100%;
+    }
+  }
+  &__item-title {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,70 @@
+.workers {
+  position: relative;
+  padding: 120px 0px;
+  background: url("@img/workers.jpg") top 0 left 0 / cover no-repeat;
+  color: white;
+  z-index: 1;
+  @include laptop-min {
+    padding: 80px 0px;
+  }
+  @include tablet {
+    padding: 60px 0px;
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      opacity: 0.5;
+      background: linear-gradient(0deg, rgba(71, 84, 71, 0) 0%, #192919 22%);
+      z-index: -1;
+    }
+  }
+  &__body {
+    max-width: 630px;
+    margin-left: auto;
+  }
+  &__title {
+    margin-bottom: 20px;
+    color: white;
+  }
+  &__content {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 12px;
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+
+    p {
+      margin: 0;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+    li {
+      position: relative;
+      padding-left: 30px;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: white;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        left: 12px;
+        top: 11px;
+      }
+    }
+  }
+  &__subcontent {
+    color: white;
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+}

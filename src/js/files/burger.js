@@ -6,7 +6,6 @@ export default function burger() {
     e.stopPropagation();
 
     if (burger.classList.contains("_open")) {
-      console.log("fa")
       burgerClose();
     } else {
       burgerOpen.classList.add("_active");

@@ -46,9 +46,9 @@ export default function validate() {
       ]);
   }
 
-  const formConnection = new JustValidate("#form-connection");
-
-  if (formConnection) {
+  
+  if (document.querySelector("#form-connection")) {
+    const formConnection = new JustValidate("#form-connection");
     formConnection
       .addField("#connection-name", [
         {

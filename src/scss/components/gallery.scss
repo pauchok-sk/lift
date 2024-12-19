@@ -1,10 +1,13 @@
 .gallery {
   padding: 120px 0px;
+  &._green {
+    background: rgba(213, 220, 187, 0.5);
+  }
   @include laptop-min {
     padding: 80px 0px;
   }
   @include tablet {
-    padding: 60px 0px
+    padding: 60px 0px;
   }
   &__title {
     margin-bottom: 60px;

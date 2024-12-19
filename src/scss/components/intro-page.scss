@@ -1,0 +1,66 @@
+.intro-page {
+  position: relative;
+  padding: 130px 0px;
+  background: url("@img/intro-page.jpg") top 0 right 0 / cover no-repeat;
+  z-index: 1;
+  @include laptop-min {
+    padding: 100px 0px;
+    background-position: top 0 right -250px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(174, 174, 168, 0) 86.85%,
+        #b3b4b1 97.2%
+      ),
+      linear-gradient(90deg, #fff 31.17%, rgba(255, 255, 255, 0) 67.14%);
+    z-index: -1;
+  }
+
+  &__subcontent {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--gray-dark);
+    width: fit-content;
+    margin-bottom: 20px;
+
+    font-size: 19px;
+    text-transform: uppercase;
+  }
+  &__title {
+    font-size: 66px;
+    line-height: 50px;
+    max-width: 700px;
+    color: var(--primary);
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+      color: var(--tuna);
+    }
+
+    @include laptop-min {
+      font-size: 55px;
+      line-height: 100%;
+      span {
+        font-size: 30px;
+        line-height: 100%;
+      }
+    }
+    @include tablet {
+      font-size: 28px;
+    }
+  }
+  &__arrows {
+    color: var(--tuna);
+    margin-bottom: 40px;
+  }
+  &__content {
+    margin-bottom: 20px;
+  }
+}
