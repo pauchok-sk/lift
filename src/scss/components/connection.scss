@@ -27,6 +27,7 @@
     span {
       font-size: inherit;
       line-height: inherit;
+      text-transform: uppercase;
     }
     @include laptop-min {
       margin-bottom: 25px;

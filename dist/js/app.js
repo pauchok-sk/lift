@@ -3058,7 +3058,6 @@
                 document.body.classList.add("body-hidden");
                 burger.addEventListener("click", (e => e.stopPropagation()));
                 burgerCloseBtn.addEventListener("click", burgerClose);
-                console.log(burgerCloseBtn);
                 document.body.addEventListener("click", burgerClose);
             }
         }));

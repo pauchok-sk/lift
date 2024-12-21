@@ -718,6 +718,11 @@ body {
   width: 100%;
   margin-bottom: 20px
 }
+.header__nav-logo._min {
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto
+}
 .header__nav-logo-img {
   width: 100%
 }
@@ -887,7 +892,8 @@ body {
 }
 .connection__title span {
   font-size: inherit;
-  line-height: inherit
+  line-height: inherit;
+  text-transform: uppercase
 }
 .connection__content {
   font-family: "Prosto One";
@@ -3795,7 +3801,7 @@ html.with-fancybox body.hide-scrollbar {
     background-position: top 0 right -250px
   }
   .intro-page__subcontent {
-    max-width: 415px
+    max-width: 300px
   }
   .intro-page__title {
     font-size: 55px;
