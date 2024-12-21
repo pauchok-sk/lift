@@ -79,6 +79,7 @@
     }
   }
   &__content {
+    font-family: "Prosto One", sans-serif;
     font-size: 20px;
     color: var(--tana);
     text-align: center;
@@ -86,6 +87,9 @@
     @include tablet {
       font-size: 16px;
       margin-bottom: 20px;
+    }
+    @include mobile {
+      font-size: 14px;
     }
   }
   &__close {

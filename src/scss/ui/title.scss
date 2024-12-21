@@ -12,6 +12,7 @@
     display: block;
     color: var(--black);
     font-size: 30px;
+    text-transform: none;
   }
   @include laptop-min {
     font-size: 48px;

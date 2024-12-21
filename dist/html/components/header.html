@@ -4,7 +4,7 @@
 			<img src="img/logo.svg" alt="logo" class="header__logo-img" />
 		</a>
 		<div class="header__line"></div>
-		<div data-da=".header__nav, 1199, 0" data-spollers data-spollers-speed="300" class="dropdown header__dropdown">
+		<div data-da=".header__nav, 1199, 2" data-spollers data-spollers-speed="300" class="dropdown header__dropdown">
 			<button data-spoller-close data-spoller class="btn dropdown__btn header__dropdown-btn">
 				<span>Группа Компаний <strong>«НеоЛифт»</strong> </span>
 				<svg class="dropdown__arrow">
@@ -23,6 +23,13 @@
 		</div>
 		<div class="header__line"></div>
 		<nav class="header__nav" id="burger">
+			<button class="btn header__nav-close" id="burger-close">
+				<span></span>
+				<span></span>
+			</button>
+			<a href="/" class="header__nav-logo">
+				<img src="img/logo.svg" alt="logo" class="header__nav-logo-img" />
+			</a>
 			<ul class="list header__list">
 				<li><a href="#rec" class="anchor">Услуги</a></li>
 				<li><a href="#gallery" class="anchor">Работы</a></li>
@@ -37,7 +44,7 @@
 			<a href="mailto:info@psp1p.ru" class="header__mail">info@psp1p.ru</a>
 		</div>
 		<div class="header__line"></div>
-		<button data-modal="order-call" class="btn-modal btn-main _primary" data-da=".header__nav,1199,2">
+		<button data-modal="order-call" class="btn-modal btn-main _primary" data-da=".header__nav,1199">
 			заказать звонок
 		</button>
 		<button class="btn header__burger-btn" id="burger-open">
@@ -47,6 +54,7 @@
 		</button>
 	</div>
 </header>
+<div class="header__burger-overlay"></div>
 
 <div class="modal" data-modal="order-call">
 	<div class="modal__overlay">

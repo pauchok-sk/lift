@@ -68,10 +68,27 @@
       }
     }
     a {
+      position: relative;
       text-transform: uppercase;
       font-family: "Prosto One", sans-serif;
+
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        right: 50%;
+        height: 1px;
+        background-color: white;
+        transition:
+          right 0.2s ease,
+          left 0.2s ease;
+      }
       @include hover {
-        text-decoration: underline;
+        &::before {
+          left: 0;
+          right: 0;
+        }
       }
       @include laptop {
         font-size: inherit !important;

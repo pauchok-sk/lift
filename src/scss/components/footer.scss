@@ -33,18 +33,7 @@
     @include laptop {
       gap: 40px;
     }
-  }
-  &__nav-item {
-  }
-  &__title {
-    margin-bottom: 20px;
-    color: white;
-  }
-  &__list {
-    li {
-      font-size: 16px;
-      line-height: 29px;
-    }
+
     a {
       position: relative;
 
@@ -69,9 +58,44 @@
       }
     }
   }
+  &__nav-item {
+  }
+  &__title {
+    margin-bottom: 20px;
+    color: white;
+  }
+  &__list {
+    li {
+      font-size: 16px;
+      line-height: 29px;
+    }
+  }
   &__contacts {
     display: flex;
     flex-direction: column;
+    a {
+      position: relative;
+
+      @include hover {
+        &::before {
+          left: 0;
+          right: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition:
+          right 0.2s ease,
+          left 0.2s ease;
+      }
+    }
   }
   &__contacts-wrapper {
     flex: 1;
@@ -80,16 +104,10 @@
     font-family: "Prosto One", sans-serif;
     display: block;
     font-size: 20px;
-    @include hover {
-      text-decoration: underline;
-    }
   }
   &__mail {
     font-size: 16px;
     line-height: 29px;
-    @include hover {
-      text-decoration: underline;
-    }
   }
   &__copyright {
     font-size: 12px;

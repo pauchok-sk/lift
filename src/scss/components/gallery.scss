@@ -51,6 +51,13 @@
     @include mobile {
       height: 220px;
     }
+
+    .swiper-slide {
+      transition: opacity 0.2s ease;
+      @include hover {
+        opacity: 0.75;
+      }
+    }
   }
   &__img {
     width: 100%;
@@ -69,8 +76,16 @@
     height: 130px;
     border-radius: 5px;
     overflow: hidden;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.75;
+    }
     @include laptop-min {
       height: 100px;
+    }
+
+    &._active {
+      opacity: 0.75;
     }
   }
   &__item-btn {

@@ -48,6 +48,9 @@
   &__btn {
     gap: 10px;
     max-width: 270px;
+    @include mobile {
+      max-width: none;
+    }
   }
   &__btn-icon {
     width: 25px;

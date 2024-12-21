@@ -40,6 +40,9 @@
     @include laptop-min {
       font-size: 19px;
     }
+    @include mobile {
+      font-size: 15px;
+    }
   }
   &__tel {
     display: block;
@@ -72,7 +75,6 @@
     @include tablet {
       max-width: 500px;
       flex-wrap: wrap;
-      margin: 0 auto;
     }
   }
   &__form-item {

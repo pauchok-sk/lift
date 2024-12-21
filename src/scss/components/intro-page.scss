@@ -31,6 +31,9 @@
 
     font-size: 19px;
     text-transform: uppercase;
+    @include laptop-min {
+      max-width: 415px;
+    }
   }
   &__title {
     font-size: 66px;

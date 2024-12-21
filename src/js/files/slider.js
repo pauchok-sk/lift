@@ -32,12 +32,19 @@ export default function slider() {
         autoplay: {
           delay: 3000,
         },
-      });
+        on: {
+          init: () => {
+            buttonsSlider[0].classList.add("_active");
 
-      buttonsSlider.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-          swiper.slideTo(index);
-        });
+            buttonsSlider.forEach((btn, index) => {
+              btn.addEventListener("click", () => swiper.slideTo(index));
+            });
+          },
+          slideChange: ({ activeIndex }) => {
+            buttonsSlider.forEach((btn) => btn.classList.remove("_active"));
+            buttonsSlider[activeIndex].classList.add("_active");
+          },
+        },
       });
     });
   }
@@ -55,11 +62,11 @@ export default function slider() {
       },
       navigation: {
         prevEl: ".reviews__slider-btn._prev",
-        nextEl: ".reviews__slider-btn._next"
+        nextEl: ".reviews__slider-btn._next",
       },
       pagination: {
         clickable: true,
-        el: ".reviews__slider-pagination"
+        el: ".reviews__slider-pagination",
       },
       breakpoints: {
         1024: {
@@ -69,8 +76,8 @@ export default function slider() {
         577: {
           slidesPerView: 2,
           spaceBetween: 30,
-        }
-      }
+        },
+      },
     });
   }
 }

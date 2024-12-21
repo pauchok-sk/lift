@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Prosto+One&display=swap);
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900; 1,300..900&display=swap');
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%
@@ -351,6 +350,7 @@ body {
   text-align: center
 }
 .modal__content {
+  font-family: "Prosto One",sans-serif;
   font-size: 20px;
   color: var(--tana);
   text-align: center;
@@ -400,7 +400,8 @@ body {
 .title-2 span {
   display: block;
   color: var(--black);
-  font-size: 30px
+  font-size: 30px;
+  text-transform: none
 }
 .title-3 {
   font-size: 30px;
@@ -558,6 +559,9 @@ body {
 .modal-form__input-check:checked+label::before {
   background-color: var(--tana)
 }
+.modal-form__input-check:checked+label::after {
+  display: block
+}
 .modal-form__label-check {
   position: relative;
   cursor: pointer;
@@ -569,15 +573,27 @@ body {
 .modal-form__label-check a {
   text-decoration: underline
 }
+.modal-form__label-check::after,
 .modal-form__label-check::before {
   position: absolute;
-  content: "";
-  width: 23px;
-  height: 23px;
+  content: ""
+}
+.modal-form__label-check::before {
   border: 2px solid var(--tana);
   border-radius: 5px;
+  width: 23px;
+  height: 23px;
   left: 0;
   top: 0
+}
+.modal-form__label-check::after {
+  display: none;
+  background: url(../img/check.svg) 0 0/100% 100% no-repeat;
+  width: 15px;
+  height: 15px;
+  top: 2px;
+  left: 2px;
+  z-index: 1
 }
 .modal-form__btn {
   width: 100%
@@ -628,7 +644,8 @@ body {
   max-width: 135px
 }
 .header__dropdown-btn strong {
-  font-weight: 500
+  font-weight: 500;
+  font-size: 18px
 }
 .header__list {
   display: flex;
@@ -651,7 +668,8 @@ body {
 .header__tel {
   font-size: 18px;
   font-weight: 500;
-  color: var(--primary)
+  color: var(--primary);
+  transition: color .2s ease
 }
 .header__mail {
   font-size: 16px;
@@ -659,6 +677,49 @@ body {
 }
 .header__burger-btn {
   display: none
+}
+.header__burger-overlay {
+  position: fixed;
+  background-color: #000;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 80;
+  transition: opacity .2s ease,visibility .2s ease
+}
+.header__burger-overlay._active {
+  opacity: .5;
+  visibility: visible
+}
+.header__nav-close {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 10px auto
+}
+.header__nav-close span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--black)
+}
+.header__nav-close span:first-child {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+.header__nav-close span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+.header__nav-logo {
+  display: none;
+  width: 100%;
+  margin-bottom: 20px
+}
+.header__nav-logo-img {
+  width: 100%
 }
 .intro {
   position: relative;
@@ -690,11 +751,12 @@ body {
   color: var(--tuna);
   font-size: 47px;
   line-height: 52px;
-  letter-spacing: .47px
+  letter-spacing: .47px;
+  text-transform: none
 }
 .intro__content {
   max-width: 700px;
-  margin-bottom: 50px
+  margin: 0 0 50px 0
 }
 .intro__spec {
   position: absolute;
@@ -725,7 +787,8 @@ body {
 .intro__spec-content {
   font-size: 18px;
   font-weight: 300;
-  color: var(--light)
+  color: var(--light);
+  margin: 0
 }
 .rec {
   padding: 120px 0
@@ -880,6 +943,9 @@ body {
   width: 100%;
   height: 375px
 }
+.gallery__item-slider .swiper-slide {
+  transition: opacity .2s ease
+}
 .gallery__img {
   width: 100%;
   height: 100%;
@@ -897,7 +963,11 @@ body {
   grid-column: 4 span;
   height: 130px;
   border-radius: 5px;
-  overflow: hidden
+  overflow: hidden;
+  transition: opacity .2s ease
+}
+.gallery__nav-btn._active {
+  opacity: .75
 }
 .gallery__item-btn {
   width: 100%;
@@ -1148,7 +1218,8 @@ body {
   margin-bottom: 60px
 }
 .certificates__gallery-btn {
-  width: calc(25% - 23px)
+  width: calc(25% - 23px);
+  transition: opacity .2s ease
 }
 .certificates__gallery-img {
   width: 100%
@@ -1218,7 +1289,12 @@ body {
   justify-content: center;
   font-size: 28px;
   width: 35px;
-  height: 35px
+  height: 35px;
+  transition: opacity .2s ease
+}
+.reviews__slider-btn.swiper-button-disabled {
+  pointer-events: none;
+  opacity: .4
 }
 .reviews__slider-pagination {
   cursor: pointer;
@@ -1312,8 +1388,19 @@ body {
   font-size: 20px
 }
 .contacts__item a {
+  position: relative;
   text-transform: uppercase;
   font-family: "Prosto One",sans-serif
+}
+.contacts__item a::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background-color: #fff;
+  transition: right .2s ease,left .2s ease
 }
 .contacts__map {
   height: 630px
@@ -1479,7 +1566,11 @@ body {
 }
 .consultation__content {
   color: #fff;
+  text-transform: none;
   margin: 0 0 50px 0
+}
+.consultation__btn {
+  font-weight: 500
 }
 .workers {
   position: relative;
@@ -1549,18 +1640,10 @@ body {
   flex-wrap: wrap;
   gap: 140px
 }
-.footer__title {
-  margin-bottom: 20px;
-  color: #fff
-}
-.footer__list li {
-  font-size: 16px;
-  line-height: 29px
-}
-.footer__list a {
+.footer__nav a {
   position: relative
 }
-.footer__list a::before {
+.footer__nav a::before {
   position: absolute;
   content: "";
   right: 50%;
@@ -1570,9 +1653,30 @@ body {
   background-color: currentColor;
   transition: right .2s ease,left .2s ease
 }
+.footer__title {
+  margin-bottom: 20px;
+  color: #fff
+}
+.footer__list li {
+  font-size: 16px;
+  line-height: 29px
+}
 .footer__contacts {
   display: flex;
   flex-direction: column
+}
+.footer__contacts a {
+  position: relative
+}
+.footer__contacts a::before {
+  position: absolute;
+  content: "";
+  right: 50%;
+  left: 50%;
+  bottom: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: right .2s ease,left .2s ease
 }
 .footer__contacts-wrapper {
   flex: 1
@@ -3314,6 +3418,9 @@ html.with-fancybox body.hide-scrollbar {
   .header__dropdown-btn {
     font-size: 14px
   }
+  .header__dropdown-btn strong {
+    font-size: 14px
+  }
   .header__list a {
     font-size: 14px
   }
@@ -3465,19 +3572,13 @@ html.with-fancybox body.hide-scrollbar {
     transition: transform .2s ease;
     transition: transform .2s ease,-webkit-transform .2s ease
   }
-  .header__burger-btn._active span {
-    position: absolute
+  .header__nav-close {
+    display: flex;
+    align-items: center;
+    justify-content: center
   }
-  .header__burger-btn._active span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg)
-  }
-  .header__burger-btn._active span:nth-child(2) {
-    display: none
-  }
-  .header__burger-btn._active span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg)
+  .header__nav-logo {
+    display: block
   }
   .intro__wrapper {
     min-height: 525px
@@ -3653,10 +3754,13 @@ html.with-fancybox body.hide-scrollbar {
     width: 650px
   }
   .about__info {
-    flex: 0 1 650px
+    flex: 0 1 100%
   }
   .about__subtitle {
     font-size: 25px
+  }
+  .about__content {
+    max-width: none
   }
   .about__team-wrapper {
     justify-content: center;
@@ -3689,6 +3793,9 @@ html.with-fancybox body.hide-scrollbar {
   .intro-page {
     padding: 100px 0;
     background-position: top 0 right -250px
+  }
+  .intro-page__subcontent {
+    max-width: 415px
   }
   .intro-page__title {
     font-size: 55px;
@@ -3803,8 +3910,7 @@ html.with-fancybox body.hide-scrollbar {
   }
   .connection__form {
     max-width: 500px;
-    flex-wrap: wrap;
-    margin: 0 auto
+    flex-wrap: wrap
   }
   .connection__form-item {
     flex-basis: 100%
@@ -3972,15 +4078,33 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (max-width:479px) {
+  .modal__content {
+    font-size: 14px
+  }
   .modal__close {
     top: 10px;
     right: 10px
   }
+  .modal-form {
+    gap: 0
+  }
+  .modal-form__item {
+    margin-bottom: 15px
+  }
+  .modal-form__policy-wrapper {
+    margin: 0 0 15px 0
+  }
   .intro__btn {
     width: 100%
   }
+  .connection__content {
+    font-size: 15px
+  }
   .gallery__item-slider {
     height: 220px
+  }
+  .cost__btn {
+    max-width: none
   }
   .about__team-wrapper {
     flex-direction: column;
@@ -3992,8 +4116,21 @@ html.with-fancybox body.hide-scrollbar {
   .steps__btn {
     width: 100%
   }
+  .why-we__img {
+    display: none
+  }
   .consultation__btn {
     width: 100%
+  }
+}
+@media (max-width:420px) {
+  .about__team-item {
+    max-width: none;
+    width: 100%
+  }
+  .about__team-img {
+    width: 100%;
+    height: auto
   }
 }
 @media (any-hover:hover) {
@@ -4030,7 +4167,7 @@ html.with-fancybox body.hide-scrollbar {
     color: var(--primary)
   }
   .header__tel:hover {
-    text-decoration: underline
+    color: var(--orange)
   }
   .header__mail:hover {
     color: var(--primary)
@@ -4038,22 +4175,30 @@ html.with-fancybox body.hide-scrollbar {
   .connection__tel:hover {
     color: var(--primary)
   }
+  .gallery__item-slider .swiper-slide:hover {
+    opacity: .75
+  }
+  .gallery__nav-btn:hover {
+    opacity: .75
+  }
   .social__item-btn:hover .social__item-arrow {
     -webkit-transform: translateX(15px);
     transform: translateX(15px)
   }
-  .contacts__item a:hover {
-    text-decoration: underline
+  .certificates__gallery-btn:hover {
+    opacity: .75
   }
-  .footer__list a:hover::before {
+  .contacts__item a:hover::before {
     left: 0;
     right: 0
   }
-  .footer__tel:hover {
-    text-decoration: underline
+  .footer__nav a:hover::before {
+    left: 0;
+    right: 0
   }
-  .footer__mail:hover {
-    text-decoration: underline
+  .footer__contacts a:hover::before {
+    left: 0;
+    right: 0
   }
 }
 @media (hover:none) {
@@ -4090,7 +4235,7 @@ html.with-fancybox body.hide-scrollbar {
     color: var(--primary)
   }
   .header__tel:active {
-    text-decoration: underline
+    color: var(--orange)
   }
   .header__mail:active {
     color: var(--primary)
@@ -4098,22 +4243,30 @@ html.with-fancybox body.hide-scrollbar {
   .connection__tel:active {
     color: var(--primary)
   }
+  .gallery__item-slider .swiper-slide:active {
+    opacity: .75
+  }
+  .gallery__nav-btn:active {
+    opacity: .75
+  }
   .social__item-btn:active .social__item-arrow {
     -webkit-transform: translateX(15px);
     transform: translateX(15px)
   }
-  .contacts__item a:active {
-    text-decoration: underline
+  .certificates__gallery-btn:active {
+    opacity: .75
   }
-  .footer__list a:active::before {
+  .contacts__item a:active::before {
     left: 0;
     right: 0
   }
-  .footer__tel:active {
-    text-decoration: underline
+  .footer__nav a:active::before {
+    left: 0;
+    right: 0
   }
-  .footer__mail:active {
-    text-decoration: underline
+  .footer__contacts a:active::before {
+    left: 0;
+    right: 0
   }
 }
 @media (hover:hover) {

@@ -52,6 +52,11 @@
     font-size: 28px;
     width: 35px;
     height: 35px;
+    transition: opacity .2s ease;
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
   }
   &__slider-pagination {
     cursor: pointer;

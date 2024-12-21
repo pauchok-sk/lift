@@ -5,7 +5,7 @@
     </a>
     <div class="header__line"></div>
     <div
-      data-da=".header__nav, 1199, 0"
+      data-da=".header__nav, 1199, 2"
       data-spollers
       data-spollers-speed="300"
       class="dropdown header__dropdown"
@@ -32,6 +32,13 @@
     </div>
     <div class="header__line"></div>
     <nav class="header__nav" id="burger">
+      <button class="btn header__nav-close" id="burger-close">
+        <span></span>
+        <span></span>
+      </button>
+      <a href="/" class="header__nav-logo">
+        <img src="@img/logo.svg" alt="logo" class="header__nav-logo-img" />
+      </a>
       <ul class="list header__list">
         <li><a href="#rec" class="anchor">Услуги</a></li>
         <li><a href="#gallery" class="anchor">Работы</a></li>
@@ -49,7 +56,7 @@
     <button
       data-modal="order-call"
       class="btn-modal btn-main _primary"
-      data-da=".header__nav,1199,2"
+      data-da=".header__nav,1199"
     >
       заказать звонок
     </button>
@@ -60,6 +67,7 @@
     </button>
   </div>
 </header>
+<div class="header__burger-overlay"></div>
 
 <div class="modal" data-modal="order-call">
   <div class="modal__overlay">
@@ -108,16 +116,26 @@
           <div data-spollers class="modal-form__telephones parent-mask">
             <div class="select-image">
               <div data-spoller data-spoller-close class="select-image__btn">
-                <img src="@img/russia.svg" alt="icon" class="select-image__icon" />
+                <img
+                  src="@img/russia.svg"
+                  alt="icon"
+                  class="select-image__icon"
+                />
                 <svg class="select-image__arrow">
                   <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
                 </svg>
               </div>
               <div class="select-image__item">
-                <div data-mask-btn="+399 99 999 9999" class="select-image__item-btn">
+                <div
+                  data-mask-btn="+399 99 999 9999"
+                  class="select-image__item-btn"
+                >
                   <img src="@img/br.svg" alt="icon" />
                 </div>
-                <div data-mask-btn="+7 (999) 999-99-99" class="select-image__item-btn">
+                <div
+                  data-mask-btn="+7 (999) 999-99-99"
+                  class="select-image__item-btn"
+                >
                   <img src="@img/russia.svg" alt="icon" />
                 </div>
               </div>

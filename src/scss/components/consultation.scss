@@ -23,9 +23,11 @@
   }
   &__content {
     color: white;
+    text-transform: none;
     margin: 0px 0px 50px 0px;
   }
   &__btn {
+    font-weight: 500;
     @include mobile {
       width: 100%;
     }

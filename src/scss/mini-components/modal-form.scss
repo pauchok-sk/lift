@@ -2,9 +2,15 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @include mobile {
+    gap: 0;
+  }
 
   &__item {
     width: 100%;
+    @include mobile {
+      margin-bottom: 15px;
+    }
   }
   &__input {
     padding: 10px 18px;
@@ -55,12 +61,18 @@
   }
   &__policy-wrapper {
     margin-top: 20px;
+    @include mobile {
+      margin: 0px 0px 15px 0px;
+    }
   }
   &__input-check {
     display: none;
     &:checked + label {
       &::before {
         background-color: var(--tana);
+      }
+      &::after {
+        display: block;
       }
     }
   }
@@ -81,19 +93,31 @@
         text-decoration: none;
       }
     }
-    &::before {
+    &::before,
+    &::after {
       position: absolute;
       content: "";
-      width: 23px;
-      height: 23px;
+    }
+    &::before {
       border: 2px solid var(--tana);
       border-radius: 5px;
+      width: 23px;
+      height: 23px;
       left: 0;
       top: 0;
       @include tablet {
         width: 18px;
         height: 18px;
       }
+    }
+    &::after {
+      display: none;
+      background: url("@img/check.svg") 0 0 / 100% 100% no-repeat;
+      width: 15px;
+      height: 15px;
+      top: 2px;
+      left: 2px;
+      z-index: 1;
     }
   }
   &__btn {

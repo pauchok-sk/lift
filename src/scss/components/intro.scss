@@ -39,6 +39,7 @@
       font-size: 47px;
       line-height: 52px;
       letter-spacing: 0.47px;
+      text-transform: none;
     }
     @include laptop {
       font-size: 55px;
@@ -61,7 +62,7 @@
   }
   &__content {
     max-width: 700px;
-    margin-bottom: 50px;
+    margin: 0px 0px 50px 0px;
   }
   &__btn {
     @include mobile {
@@ -114,6 +115,7 @@
     font-size: 18px;
     font-weight: 300;
     color: var(--light);
+    margin: 0;
     @include laptop {
       font-size: 16px;
     }

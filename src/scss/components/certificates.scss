@@ -31,6 +31,10 @@
   }
   &__gallery-btn {
     width: calc(25% - 23px);
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.75;
+    }
     @include laptop-min {
       width: calc(50% - 10px);
     }
